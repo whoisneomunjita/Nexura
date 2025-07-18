@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nexura - Powerful Websites Created</title>
+<style>
+  /* Reset & base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background: #fff;
+    color: #111;
+    line-height: 1.6;
+  }
+  a {
+    color: #0071e3;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 1000;
+  }
+  .logo {
+    font-weight: 900;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    color: #000;
+    user-select: none;
+  }
+
+  nav a {
+    margin-left: 24px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #111;
+    text-transform: uppercase;
+  }
+  nav a:hover {
+    color: #0071e3;
+  }
+
+  /* Hero Section */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    text-align: center;
+    padding: 60px 20px 80px;
+    background: linear-gradient(135deg, #0071e3 0%, #00c6ff 100%);
+    color: white;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 16px;
+    max-width: 900px;
+    line-height: 1.1;
+  }
+  .hero p {
+    font-size: 1.4rem;
+    max-width: 600px;
+    margin-bottom: 32px;
+    font-weight: 500;
+    opacity: 0.9;
+  }
+  .hero .btn-primary {
+    background: #fff;
+    color: #0071e3;
+    font-weight: 700;
+    padding: 16px 40px;
+    font-size: 1.2rem;
+    border-radius: 36px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 8px 20px rgba(255,255,255,0.35);
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  .hero .btn-primary:hover {
+    background: #0071e3;
+    color: #fff;
+  }
+
+  /* Websites showcase */
+  .showcase {
+    padding: 80px 20px 120px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .showcase h2 {
+    font-weight: 900;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 48px;
+    color: #111;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+  }
+
+  .card {
+    background: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+  .card-content {
+    padding: 20px;
+  }
+  .card-content h3 {
+    font-size: 1.5rem;
+    margin: 0 0 12px;
+    font-weight: 700;
+    color: #0071e3;
+  }
+  .card-content p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.4;
+  }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid #ddd;
+    padding: 24px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    background: #fafafa;
+  }
+
+  /* WhatsApp Button */
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25d366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1100;
+    transition: background 0.3s ease;
+  }
+  .whatsapp-btn:hover {
+    background: #1ebe57;
+  }
+  .whatsapp-btn svg {
+    fill: white;
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Responsive text sizes */
+  @media (max-width: 600px) {
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="container">
+  <div class="logo">NEXURA</div>
+  <nav>
+    <a href="#showcase">Our Work</a>
+    <a href="mailto:nmunjiita@gmail.com" target="_blank">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Powering the Future with Cutting-Edge Websites</h1>
+  <p>At Nexura, we build breathtaking, fast, and powerful websites that elevate your brand and drive results.</p>
+  <button class="btn-primary" onclick="window.location.href='#showcase'">See Our Work</button>
+</section>
+
+<section id="showcase" class="showcase container">
+  <h2>Powerful Websites Created by Nexura</h2>
+  <div class="grid">
+    <div class="card" onclick="window.open('https://www.example1.com','_blank')">
+      <img src="https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&q=80" alt="Project 1" />
+      <div class="card-content">
+        <h3>Project Alpha</h3>
+        <p>A sleek e-commerce platform with seamless shopping and lightning-fast checkout.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="window.open('https://www.example2.com','_blank')">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Project 2" />
+      <div class="card-content">
+        <h3>Beta Portfolio</h3>
+        <p>A stunning personal portfolio with smooth animations and responsive design.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="window.open('https://www.example3.com','_blank')">
+      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80" alt="Project 3" />
+      <div class="card-content">
+        <h3>Gamma News</h3>
+        <p>A dynamic news website with real-time updates and interactive features.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="window.open('https://www.example4.com','_blank')">
+      <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80" alt="Project 4" />
+      <div class="card-content">
+        <h3>Delta Events</h3>
+        <p>An event booking site with smooth user experience and easy calendar integration.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Nexura | Contact: <a href="mailto:nmunjiita@gmail.com">nmunjiita@gmail.com</a>
+</footer>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/260765632700" target="_blank" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M20.52 3.48a11.64 11.64 0 0 0-16.47 16.48l-1.89 6.91 7.06-1.85a11.63 11.63 0 0 0 11.3-20.54zm-9.51 15.08a9.09 9.09 0 0 1-4.9-1.5l-.35-.21-2.91.76.77-2.84-.23-.37a9.1 9.1 0 0 1 14.98-11.74 9.1 9.1 0 0 1-7.36 14.9zM12 7.09a2.75 2.75 0 0 0-2.75 2.75c0 .48.15.93.44 1.32l-1.23 3.68 3.8-1.25c.36.23.78.35 1.22.35a2.75 2.75 0 0 0 0-5.5z"/>
+  </svg>
+</a>
+
+</body>
+</html>
